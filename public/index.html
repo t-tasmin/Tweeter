@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
  
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -24,9 +25,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <div style="float:right; font: sans-serif; text-align: center">
+      <div id="nav-div">
         <div><b>Write</b> a new tweet<div>
-        <div><i class="fas fa-angle-double-down " style="color: red ;"></i></div>
+        <div><i class="fas fa-angle-double-down arrow-icon"></i></div>
       </div>
     </nav>
 
@@ -41,6 +42,27 @@
   </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+    <p>
+      Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Lorem Ipsum best not make any more threats to your website. 
+      
+    </p>  
+    <section class="new-tweet">
+      <h2 >Compose Tweet</h2>
+      <form action="/tweets/" method="POST">
+        <div>
+           <label for="tweet-text">What are you humming about?</label>
+           <br>
+           <textarea name="text"></textarea>
+           <hr>
+           <div>
+           <button type="submit">Tweet</button>
+           <br>
+           <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
+           </div>
+        </div>
+      </form>
+    </section>
+    </main>
   </body>
 </html>
