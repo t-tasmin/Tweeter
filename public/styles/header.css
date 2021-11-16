@@ -10,3 +10,15 @@ header {
     background-color: #e8a34f;
     background-image: url("https://www.transparenttextures.com/patterns/white-brick-wall.png");
 }
+
+.arrow-icon {
+    color: red;
+    display: flex;
+    justify-content: center;
+  }
+
+  #nav-div {
+    float:right; 
+    font: sans-serif; 
+    text-align: center ;
+  }
