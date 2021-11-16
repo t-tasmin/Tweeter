@@ -1,0 +1,22 @@
+
+.new-tweet {
+  text-align: left;
+  font-family: 'sans-serif';
+  margin-left: 1em;
+}
+
+.new-tweet div div {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.new-tweet textarea{
+  background: none;
+  border: none;
+}
+.new-tweet button {
+  background-color: cornflowerblue;
+  color: #FFFFFF;
+  font-family: 'bungee';
+
+}
