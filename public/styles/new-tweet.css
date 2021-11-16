@@ -1,9 +1,9 @@
 
 .new-tweet {
+  width: 90%;
   text-align: left;
   font-family: 'sans-serif';
-  margin-left: 1em;
-}
+  }
 
 .new-tweet div div {
   display: flex; 
@@ -12,11 +12,16 @@
 
 .new-tweet textarea{
   background: none;
+  width: 100%;
   border: none;
+  border-bottom: 3px solid;
 }
 .new-tweet button {
   background-color: cornflowerblue;
   color: #FFFFFF;
   font-family: 'bungee';
+}
 
+counter {
+  font-family: 'bungee';
 }

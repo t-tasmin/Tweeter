@@ -9,6 +9,7 @@ header {
     align-items: center;
     background-color: #e8a34f;
     background-image: url("https://www.transparenttextures.com/patterns/white-brick-wall.png");
+    z-index:0;
 }
 
 .arrow-icon {
