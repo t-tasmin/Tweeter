@@ -1,4 +1,3 @@
-
 .new-tweet {
   width: 90%;
   text-align: left;
@@ -6,18 +5,18 @@
   padding-bottom: 30px;
   }
 
-.new-tweet div div {
+.new-tweet-div {
   display: flex; 
   justify-content: space-between;
 }
 
-.new-tweet textarea{
+.new-tweet-textarea {
   background: none;
   width: 100%;
   border: none;
   border-bottom: 3px solid;
 }
-.new-tweet button {
+.new-tweet-button {
   background-color: cornflowerblue;
   color: #FFFFFF;
   font-family: 'bungee';
