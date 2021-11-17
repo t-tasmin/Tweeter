@@ -1,15 +1,14 @@
 $(document).ready(function() {
 
-const createTweetElement = function (tweetData)
-{
+  const createTweetElement = function(tweetData) {
 
- let name   = tweetData["user"].name;
- let avatar = tweetData["user"].avatars;
- let handle = tweetData["user"].handle;
- let content= tweetData["content"].text;
- let days   = timeago.format(tweetData.created_at);
+    let name   = tweetData["user"].name;
+    let avatar = tweetData["user"].avatars;
+    let handle = tweetData["user"].handle;
+    let content = tweetData["content"].text;
+    let days   = timeago.format(tweetData.created_at);
 
- let Tweet=  `<article class="tweet-container">
+    let Tweet =  `<article class="tweet-container">
                 <header>
                   <div class="div1">
                     <div class="div2">
@@ -34,49 +33,48 @@ const createTweetElement = function (tweetData)
                 </footer>
               </article>`;
 
-  const $tweet = $(Tweet);
+    const $tweet = $(Tweet);
 
-  return $tweet;
-};
+    return $tweet;
+  };
 
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
+  // Fake data taken from initial-tweets.json
+  const data = [
+    {
+      "user": {
+        "name": "Newton",
+        "avatars": "https://i.imgur.com/73hZDYK.png"
+        ,
+        "handle": "@SirIsaac"
+      },
+      "content": {
+        "text": "If I have seen further it is by standing on the shoulders of giants"
+      },
+      "created_at": 1461116232227
     },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+    {
+      "user": {
+        "name": "Descartes",
+        "avatars": "https://i.imgur.com/nlhLi3I.png",
+        "handle": "@rd" },
+      "content": {
+        "text": "Je pense , donc je suis"
+      },
+      "created_at": 1461113959088
+    }
+  ];
 
 
 
-const renderTweets = function (tweets)
-{
-  for (let value of tweets){
-    const $tweet = createTweetElement(value);
-     $('.main-container').append($tweet); 
-  }
+  const renderTweets = function(tweets) {
+    for (let value of tweets) {
+      const $tweet = createTweetElement(value);
+      $('.main-container').append($tweet);
+    }
 
-};
+  };
 
-renderTweets(data);
+  renderTweets(data);
 
 });
