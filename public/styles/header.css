@@ -1,8 +1,7 @@
 
-header {
+.header1 {
     height: 400px;
     width: 100%;
-    background-color: orange;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -10,6 +9,7 @@ header {
     background-color: #e8a34f;
     background-image: url("https://www.transparenttextures.com/patterns/white-brick-wall.png");
     z-index:0;
+    padding-top: 120px;
 }
 
 .arrow-icon {
