@@ -7,7 +7,7 @@ const createTweetElement = function (tweetData)
  let avatar = tweetData["user"].avatars;
  let handle = tweetData["user"].handle;
  let content= tweetData["content"].text;
- let days   = timeago.format(tweetData["content"].created_at);
+ let days   = timeago.format(tweetData.created_at);
 
  let Tweet=  `<article class="tweet-container">
                 <header>
