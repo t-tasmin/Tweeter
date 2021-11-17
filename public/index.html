@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- App JS -->
@@ -25,15 +26,15 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav id="nav">
+      <span id="nav-span">tweeter</span>
       <div id="nav-div">
         <div><b>Write</b> a new tweet<div>
-        <div><i class="fas fa-angle-double-down arrow-icon"></i></div>
+        <div><i class="arrow-icon fas fa-angle-double-down"></i></div>
       </div>
     </nav>
 
-    <header class="header1">
+    <header id="header-top">
       <div>
           <img style="height: 220px;" src="/images/profile-hex.png"> 
       </div>
@@ -44,7 +45,7 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="main-container" style="display:flex; flex-direction: column;" >
+    <main class="main-container">
       
       <section class="new-tweet">
       <h2 >Compose Tweet</h2>
