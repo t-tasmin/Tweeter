@@ -75,6 +75,16 @@ $(document).ready(function() {
 
   };
 
-  renderTweets(data);
-
+  
+  const loadtweets = function () {
+      $.get("/tweets/", function(data){
+         renderTweets(data);
+       });
+  
+  }
+  
+  loadtweets();
+  
 });
+
+
