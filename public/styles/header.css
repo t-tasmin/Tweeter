@@ -1,5 +1,5 @@
 
-.header1 {
+#header-top {
     height: 400px;
     width: 100%;
     display: flex;
@@ -18,8 +18,4 @@
     justify-content: center;
   }
 
-  #nav-div {
-    float:right; 
-    font: sans-serif; 
-    text-align: center ;
-  }
+  
