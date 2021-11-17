@@ -19,6 +19,26 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+          $("form").submit(function(event){
+              // Stop form from submitting normally
+              event.preventDefault();
+              
+              /* Serialize the submitted form control values to be sent to the web server with the request */
+              var formValues = $(this).serialize();
+              // Send the form data using post
+              $.post("/tweets/", formValues, function(data){
+                  // Display the returned data in browser
+                  alert('Success');
+              });
+          });
+      });
+      </script>
+  
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
