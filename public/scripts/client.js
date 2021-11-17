@@ -7,7 +7,7 @@ const createTweetElement = function (tweetData)
  let avatar = tweetData["user"].avatars;
  let handle = tweetData["user"].handle;
  let content= tweetData["content"].text;
- let days   = tweetData["content"].created_at;
+ let days   = timeago.format(tweetData["content"].created_at);
 
  let Tweet=  `<article class="tweet-container">
                 <header>
@@ -24,7 +24,7 @@ const createTweetElement = function (tweetData)
                 </div>
                 <footer>
                   <div class="div3">
-                    <span>${days} Days Ago</span>
+                    <span>${days}</span>
                     <div class="div4">
                       <i class="fas fa-flag"></i>
                       <i class="fas fa-retweet"></i>
@@ -61,3 +61,14 @@ console.log($tweet); // to see what it looks like
 $('.main-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 });
+
+
+const renderTweets = function (tweets)
+{
+
+
+
+    
+}
+
+renderTweets(data);
