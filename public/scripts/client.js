@@ -1,5 +1,12 @@
 $(document).ready(function() {
   
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+
   const createTweetElement = function(tweetData) {
 
     let name   = tweetData["user"].name;
@@ -19,7 +26,7 @@ $(document).ready(function() {
                   </div>
                 </header>
                 <div class="tweet-text">
-                  <label for="tweets">${content}</label>
+                  <label for="tweets">${escape(content)}</label>
                 </div>
                 <footer>
                   <div class="div3">
@@ -43,7 +50,7 @@ $(document).ready(function() {
     
     for (let i=tweets.length-1; i>=0; i--) {
         const $tweet = createTweetElement(tweets[i]);
-        $('.main-container').append($tweet);
+        $('.tweets-main-container').append($tweet);
     }
   };
 
@@ -66,21 +73,29 @@ $(document).ready(function() {
     var formValues = $(this).serialize();
       
     if ($(".new-tweet-textarea").val() === "") {
-        alert("There is No Tweet");
+        $(".alert-container").slideDown();
+        $(".alert-container-p").html("<b>❌❌❌Error: There is No Tweet!❌❌❌</b>");
     } else if (Number($(".counter").val()) < 0) {
-      alert("Tweet content is too long.");
+        $(".alert-container").slideDown();
+        $(".alert-container-p").html("<b>❌❌❌Error: Too Long. Please limit it to 140 chars!❌❌❌</b>");
+        $(".new-tweet-textarea").val('');
+        $(".counter").text('140');
     } else {
-       // Send the form data using post
+        $(".alert-container").slideUp();
+        $(".new-tweet-textarea").val('');
+        $(".counter").text('140');
+        // Send the form data using post
         $.post("/tweets/", formValues, function(data){
           alert('Success');
           
           $.get("/tweets/", function(data){
             const $t1 = createTweetElement(data[data.length-1]);
-            $('.main-container').prepend($t1);
-            
+            $('.tweets-main-container').prepend($t1);
           });
         });
     }
+
+    
   });
 });
 

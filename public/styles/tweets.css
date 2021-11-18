@@ -47,6 +47,19 @@
 
 
 
-  .main-container {
+  .tweets-main-container {
    width: 90%;
+  }
+
+  .alert-container {
+    border: 2px red solid;
+    width: 90%;
+    height: 70px;
+    margin-top: 20px;
+    text-align:center;
+    display: none;
+  }
+
+  .alert-container-p {
+    color: red; 
   }

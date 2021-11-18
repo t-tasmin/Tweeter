@@ -20,34 +20,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!--
-    <script>
-      $(document).ready(function(){
-          $("form").submit(function(event){
-              // Stop form from submitting normally
-              event.preventDefault();
-              
-              /* Serialize the submitted form control values to be sent to the web server with the request */
-              var formValues = $(this).serialize();
-                
-              if ($(".new-tweet-textarea").val() === "") {
-                  alert("There is No Tweet");
-              } else if (Number($(".counter").val()) < 0) {
-                alert("Tweet content is too long.");
-              } else {
-                 // Send the form data using post
-                  $.post("/tweets/", formValues, function(data){
-                    alert('Success');
-                    const loadtweets=require('../scripts/clients.js');
-                    loadtweets();
-                  });
-              }
-        });
-      });
-    </script>
-  -->
-  
-
+        
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -74,25 +47,30 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="big-container">
-      
+    <main class="main-container">
+
+      <div class="alert-container">
+        <p class="alert-container-p"></p>
+      </div>
+    
+
       <section class="new-tweet">
-      <h2 >Compose Tweet</h2>
-      <form action="/tweets/" method="POST">
-        <div>
-           <label for="tweet-text">What are you humming about?</label>
-           <br>
-           <textarea class="new-tweet-textarea" name="text" placeholder="Write Here."></textarea>
-           <div class="new-tweet-div">
-           <button class="new-tweet-button" type="submit">Tweet</button>
-           <br>
-           <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
-          </div> 
-        </div>
-      </form>
+        <h2 >Compose Tweet</h2>
+        <form action="/tweets/" method="POST">
+          <div>
+            <label for="tweet-text">What are you humming about?</label>
+            <br>
+            <textarea class="new-tweet-textarea" name="text" placeholder="Write Here."></textarea>
+            <div class="new-tweet-div">
+            <button class="new-tweet-button" type="submit">Tweet</button>
+            <br>
+            <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
+            </div> 
+          </div>
+        </form>
       </section>
-      <section class="main-container">
-        
+      
+      <section class="tweets-main-container">
       </section>
       
     </main>  
