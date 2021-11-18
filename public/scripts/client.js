@@ -80,6 +80,8 @@ $(document).ready(function() {
         $(".alert-container-p").html("<b>❌❌❌Error: Too Long. Please limit it to 140 chars!❌❌❌</b>");
         $(".new-tweet-textarea").val('');
         $(".counter").text('140');
+        $(".counter").css("color", "black");
+    
     } else {
         $(".alert-container").slideUp();
         $(".new-tweet-textarea").val('');
