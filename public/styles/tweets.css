@@ -2,7 +2,6 @@
  .tweet-container {
   border: 3px solid;
   height: 230px;
-  width: 90%;
   padding-top: 0.5em;
   padding-left: 0.8em;
   padding-right: 0.8em;
@@ -45,5 +44,9 @@
     align-items: flex-end; 
     padding-bottom: 5px;
   }
-  
 
+
+
+  .main-container {
+   width: 90%;
+  }

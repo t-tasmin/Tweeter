@@ -20,7 +20,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    
+    <!--
     <script>
       $(document).ready(function(){
           $("form").submit(function(event){
@@ -29,14 +29,23 @@
               
               /* Serialize the submitted form control values to be sent to the web server with the request */
               var formValues = $(this).serialize();
-              // Send the form data using post
-              $.post("/tweets/", formValues, function(data){
-                  // Display the returned data in browser
-                  alert('Success');
-              });
-          });
+                
+              if ($(".new-tweet-textarea").val() === "") {
+                  alert("There is No Tweet");
+              } else if (Number($(".counter").val()) < 0) {
+                alert("Tweet content is too long.");
+              } else {
+                 // Send the form data using post
+                  $.post("/tweets/", formValues, function(data){
+                    alert('Success');
+                    const loadtweets=require('../scripts/clients.js');
+                    loadtweets();
+                  });
+              }
+        });
       });
-      </script>
+    </script>
+  -->
   
 
     <!-- App JS -->
@@ -65,7 +74,7 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="main-container">
+    <main class="big-container">
       
       <section class="new-tweet">
       <h2 >Compose Tweet</h2>
@@ -81,6 +90,9 @@
           </div> 
         </div>
       </form>
+      </section>
+      <section class="main-container">
+        
       </section>
       
     </main>  
