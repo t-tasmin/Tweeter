@@ -1,4 +1,8 @@
 
+.tweets-main-container {
+  width: 90%;
+ }
+
  .tweet-container {
   border: 3px solid;
   height: 230px;
@@ -45,12 +49,7 @@
     padding-bottom: 5px;
   }
 
-
-
-  .tweets-main-container {
-   width: 90%;
-  }
-
+  
   .alert-container {
     border: 2px red solid;
     width: 90%;
@@ -62,4 +61,26 @@
 
   .alert-container-p {
     color: red; 
+  }
+
+  
+
+  @media only screen and (min-width: 1024px) {
+
+    .tweets-main-container {
+      width: 90%;
+      margin-left: 50px;
+      margin-right: 50px;
+      padding-left: 100px;
+     }
+
+     .alert-container {
+      margin-top: 140px;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      width: 700px;
+      margin-left: 50px;
+      margin-right: 50px;
+      text-align: center;
+    }
   }
