@@ -9,6 +9,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["header"](docs/header.jpg)
 
+!["tweet"](docs/tweet.jpg)
+
+
+
 
 ## Getting Started
 
