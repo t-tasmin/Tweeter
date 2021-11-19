@@ -4,7 +4,7 @@
   font-family: 'sans-serif';
   padding-bottom: 30px;
   margin-top: 50px;
-  }
+}
 
 .new-tweet-div {
   display: flex; 
@@ -29,6 +29,7 @@
 
 
 @media only screen and (min-width: 1024px) {
+  
   .new-tweet {
     margin-top: 200px;
     width: 90%;

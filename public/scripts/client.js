@@ -74,23 +74,20 @@ $(document).ready(function() {
       
     if ($(".new-tweet-textarea").val() === "") {
         $(".alert-container").slideDown();
-        $(".alert-container-p").html("<b>❌❌❌Error: There is No Tweet!❌❌❌</b>");
+        $(".alert-container-p").html("<b>🔥🔥🔥Error: There is No Tweet!🔥🔥🔥</b>");
     } else if (Number($(".counter").val()) < 0) {
         $(".alert-container").slideDown();
-        $(".alert-container-p").html("<b>❌❌❌Error: Too Long. Please limit it to 140 chars!❌❌❌</b>");
+        $(".alert-container-p").html("<b>🔥🔥🔥Error: Too Long. Please limit it to 140 chars!🔥🔥🔥</b>");
         $(".new-tweet-textarea").val('');
         $(".counter").text('140');
         $(".counter").css("color", "black");
-    
-    } else {
+    }  else {
         $(".alert-container").slideUp();
         $(".new-tweet-textarea").val('');
         $(".counter").text('140');
         // Send the form data using post
         $.post("/tweets/", formValues, function(data){
-          alert('Success');
-          
-          $.get("/tweets/", function(data){
+            $.get("/tweets/", function(data){
             const $t1 = createTweetElement(data[data.length-1]);
             $('.tweets-main-container').prepend($t1);
           });

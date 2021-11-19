@@ -1,5 +1,5 @@
 
-.tweets-main-container {
+ .tweets-main-container {
   width: 90%;
  }
 
@@ -52,7 +52,7 @@
   
   .alert-container {
     border: 2px red solid;
-    width: 90%;
+    width: 100%;
     height: 70px;
     margin-top: 20px;
     text-align:center;
@@ -75,10 +75,9 @@
      }
 
      .alert-container {
-      margin-top: 140px;
       margin-bottom: 0px;
       padding-bottom: 0px;
-      width: 700px;
+      width: 90%;
       margin-left: 50px;
       margin-right: 50px;
       text-align: center;
