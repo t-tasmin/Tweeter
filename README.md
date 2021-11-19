@@ -7,6 +7,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["laptop"](docs/laptop.jpg)
 
+!["header"](docs/header.jpg)
+
 
 ## Getting Started
 
